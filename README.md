@@ -3,12 +3,16 @@
 Training code for Multi-way BP. Both the Pytorch and Torch implementations are available.
 
 ## PyTorch Implementation ##
-###Requirements###
+
+### Requirements ###
+
 - Pytorch=1.0.0
 - python=2.7
 
-###Train###  
+### Train ###  
+
 1. Prepare data  
+2. 
   Download the training data (e.g., CIFAR-10) and put them to your own directory.  
 
 2. Train deep models with Multi-way BP
@@ -29,6 +33,7 @@ Some Key arguments:
 ## Torch Implementation ##
 
 ### Requirements ###
+
 See the [installation instructions](https://github.com/facebook/fb.resnet.torch/blob/master/INSTALL.md "installation") for a step-by-step guide.
 
 - Install [Torch](http://torch.ch/ "torch") on a machine with CUDA GPU
@@ -36,8 +41,10 @@ See the [installation instructions](https://github.com/facebook/fb.resnet.torch/
 
 If you already have Torch installed, update the luarocks ```nn```, ```cunn``` and ```cudnn```.
 
-###Train###  
+### Train ###  
+
 1. Prepare data  
+
   Download the training data (e.g., CIFAR-10) and put them to your own directory.  
 
 2. Train deep models with Multi-way BP
@@ -65,6 +72,7 @@ th test.lua -dataset cifar10 -model cifar10-mwresnet-26-2-wide-10
 ```
 
 2. Test Intermediate Models
+
 During the training, **Multi-way BP** simultaneously generates multiple models with different depth. Take [CIFAR10-MwResNet-56-5](https://yadi.sk/d/k1_34p-qvjdCT "MwResNet-56-5") (including the *auxiliary outputs* file) for example:
 
 | Intermediate models | Depth | #Params |
