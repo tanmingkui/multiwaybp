@@ -64,7 +64,7 @@ If you already have Torch installed, update the luarocks ```nn```, ```cunn``` an
 - [CIFAR100-MwResNet-56-5](https://yadi.sk/d/NqIb0RYyvcyKo "MwResNet-56-5")
 - [CIFAR100-MwResNet-26-2/10](https://yadi.sk/d/W8S5Cp3hvcyLT "MwResNet-26-2/10")
 
-To test the performance of the MwResNet modesl, please download the pre-trained models and move them into the directory ``` ./pretrained ```.
+To test the performance of the MwResNet models, please download the pre-trained models and move them into the directory ``` ./pretrained ```.
 Then you can run the script [test.lua](https://github.com/tanmingkui/multiwaybp/tree/master/multiwaybp-torch/test.lua "testing"). For example:
 
 ```
