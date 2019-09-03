@@ -12,8 +12,8 @@ Training code for Multi-way BP. Both the Pytorch and Torch implementations are a
 ### Train ###  
 
 1. Prepare data  
-2. 
-  Download the training data (e.g., CIFAR-10) and put them to your own directory.  
+
+	Download the training data (e.g., CIFAR-10) and put them to your own directory.  
 
 2. Train deep models with Multi-way BP
 ```
@@ -45,7 +45,7 @@ If you already have Torch installed, update the luarocks ```nn```, ```cunn``` an
 
 1. Prepare data  
 
-  Download the training data (e.g., CIFAR-10) and put them to your own directory.  
+	Download the training data (e.g., CIFAR-10) and put them to your own directory.  
 
 2. Train deep models with Multi-way BP
 ```
