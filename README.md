@@ -1,4 +1,4 @@
-# Multi-way Backpropagation for Training CompactDeep Neural Networks #
+# Multi-way Backpropagation for Training Compact Deep Neural Networks #
 
 Training code for Multi-way BP. Both the Pytorch and Torch implementations are available.
 
