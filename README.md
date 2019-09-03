@@ -1,0 +1,82 @@
+# Multi-way Backpropagation for Training CompactDeep Neural Networks #
+
+Training code for Multi-way BP. Both the Pytorch and Torch implementations are available.
+
+## PyTorch Implementation ##
+###Requirements###
+- Pytorch=1.0.0
+- python=2.7
+
+###Train###  
+1. Prepare data  
+  Download the training data (e.g., CIFAR-10) and put them to your own directory.  
+
+2. Train deep models with Multi-way BP
+```
+ cd multiwaybp-pytorch
+ python main.py
+```
+
+You may refer to options.py for more argument.
+
+Some Key arguments:
+- dataPath : path for loading data set
+- save_path : path for saving model file
+- nGPU : number of GPUs to use (support multi-gpu) (Default: 1)
+- netType : choose the network type as baseline model
+- pivotSet : where to add aux-classifier
+
+## Torch Implementation ##
+
+### Requirements ###
+See the [installation instructions](https://github.com/facebook/fb.resnet.torch/blob/master/INSTALL.md "installation") for a step-by-step guide.
+
+- Install [Torch](http://torch.ch/ "torch") on a machine with CUDA GPU
+- Install [cuDNN](https://developer.nvidia.com/cudnn "cudnn") and the corresponding bindings in Torch
+
+If you already have Torch installed, update the luarocks ```nn```, ```cunn``` and ```cudnn```.
+
+###Train###  
+1. Prepare data  
+  Download the training data (e.g., CIFAR-10) and put them to your own directory.  
+
+2. Train deep models with Multi-way BP
+```
+ cd multiwaybp-torch
+ th train.lua
+```
+
+### Model Testing ###
+
+1. Test pre-trained models
+
+- [CIFAR10-MwResNet-56-2](https://yadi.sk/d/zMvzifB0vcyGA "MwResNet-56-2")
+- [CIFAR10-MwResNet-56-5](https://yadi.sk/d/k1_34p-qvjdCT "MwResNet-56-5")
+- [CIFAR10-MwResNet-26-2/10](https://yadi.sk/d/g-fKiJdKvcyJH "MwResNet-26-2/10")
+- [CIFAR100-MwResNet-56-2](https://yadi.sk/d/9GTk0HrYvcyK6 "MwResNet-56-2")
+- [CIFAR100-MwResNet-56-5](https://yadi.sk/d/NqIb0RYyvcyKo "MwResNet-56-5")
+- [CIFAR100-MwResNet-26-2/10](https://yadi.sk/d/W8S5Cp3hvcyLT "MwResNet-26-2/10")
+
+To get the result of the AuxNet model for given benchmark data sets, please download the corresponding models and move them into the directory ``` ./pretrained ```.
+Then you can run the script [test.lua](https://github.com/guoyongcn/auxnet/blob/master/test.lua "testing"). For example:
+
+```
+th test.lua -dataset cifar10 -model cifar10-mwresnet-26-2-wide-10 
+```
+
+2. Test Intermediate Models
+During the training, **Multi-way BP** simultaneously generates multiple models with different depth. Take [CIFAR10-MwResNet-56-5](https://yadi.sk/d/k1_34p-qvjdCT "MwResNet-56-5") (including the *auxiliary outputs* file) for example:
+
+| Intermediate models | Depth | #Params |
+| ------------- |:-------------:|:-----:|
+|Output-56| 56 | 0.85M |
+|Output-45| 45 | 0.48M |
+|Output-35| 35 | 0.18M |
+|Output-25| 25 | 0.09M |
+|Output-15| 15 | 0.03M |
+
+To test the intermediate models, simply run the script [intermediate.lua](https://github.com/guoyongcn/auxnet/blob/master/intermediate.lua "intermediate").
+
+```
+th intermediate.lua -dataset cifar10 -model cifar10-mwresnet-56-5 -outputs cifar10-mwresnet-56-5-outputs
+```
