@@ -71,7 +71,7 @@ Then you can run the script [test.lua](https://github.com/tanmingkui/multiwaybp/
 th test.lua -dataset cifar10 -model cifar10-mwresnet-26-2-wide-10 
 ```
 
-2. Test Intermediate Models
+2. Test intermediate models
 
 During the training, **Multi-way BP** simultaneously generates multiple models with different depth. Take [CIFAR10-MwResNet-56-5](https://yadi.sk/d/k1_34p-qvjdCT "MwResNet-56-5") (including the *auxiliary outputs* file) for example:
 
