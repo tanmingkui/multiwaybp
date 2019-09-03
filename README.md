@@ -77,11 +77,11 @@ During the training, **Multi-way BP** simultaneously generates multiple models w
 
 | Intermediate models | Depth | #Params |
 | ------------- |:-------------:|:-----:|
-|Output-56| 56 | 0.85M |
-|Output-45| 45 | 0.48M |
-|Output-35| 35 | 0.18M |
-|Output-25| 25 | 0.09M |
-|Output-15| 15 | 0.03M |
+|model-15| 15 | 0.03M |
+|model-25| 25 | 0.09M |
+|model-35| 35 | 0.18M |
+|model-45| 45 | 0.48M |
+|model-56| 56 | 0.85M |
 
 To test the intermediate models, simply run the script [intermediate.lua](https://github.com/tanmingkui/multiwaybp/tree/master/multiwaybp-torch/intermediate.lua "intermediate").
 
