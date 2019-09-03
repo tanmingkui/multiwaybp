@@ -65,7 +65,7 @@ If you already have Torch installed, update the luarocks ```nn```, ```cunn``` an
 - [CIFAR100-MwResNet-26-2/10](https://yadi.sk/d/W8S5Cp3hvcyLT "MwResNet-26-2/10")
 
 To get the result of the AuxNet model for given benchmark data sets, please download the corresponding models and move them into the directory ``` ./pretrained ```.
-Then you can run the script [test.lua](https://github.com/guoyongcn/auxnet/blob/master/test.lua "testing"). For example:
+Then you can run the script [test.lua](https://github.com/tanmingkui/multiwaybp/tree/master/multiwaybp-torch/test.lua "testing"). For example:
 
 ```
 th test.lua -dataset cifar10 -model cifar10-mwresnet-26-2-wide-10 
@@ -83,7 +83,7 @@ During the training, **Multi-way BP** simultaneously generates multiple models w
 |Output-25| 25 | 0.09M |
 |Output-15| 15 | 0.03M |
 
-To test the intermediate models, simply run the script [intermediate.lua](https://github.com/guoyongcn/auxnet/blob/master/intermediate.lua "intermediate").
+To test the intermediate models, simply run the script [intermediate.lua](https://github.com/tanmingkui/multiwaybp/tree/master/multiwaybp-torch/intermediate.lua "intermediate").
 
 ```
 th intermediate.lua -dataset cifar10 -model cifar10-mwresnet-56-5 -outputs cifar10-mwresnet-56-5-outputs
