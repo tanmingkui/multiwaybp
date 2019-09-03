@@ -9,7 +9,7 @@ Training code for Multi-way BP. Both the Pytorch and Torch implementations are a
 - Pytorch=1.0.0
 - python=2.7
 
-### Train ###  
+### Train Method ###  
 
 1. Prepare data  
 
@@ -41,7 +41,7 @@ See the [installation instructions](https://github.com/facebook/fb.resnet.torch/
 
 If you already have Torch installed, update the luarocks ```nn```, ```cunn``` and ```cudnn```.
 
-### Train ###  
+### Training Method ###  
 
 1. Prepare data  
 
@@ -53,7 +53,7 @@ If you already have Torch installed, update the luarocks ```nn```, ```cunn``` an
  th train.lua
 ```
 
-### Model Testing ###
+### Testing Method ###
 
 1. Test pre-trained models
 
