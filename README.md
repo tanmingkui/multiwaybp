@@ -57,12 +57,12 @@ If you already have Torch installed, update the luarocks ```nn```, ```cunn``` an
 
 1. Test pre-trained models
 
-- [CIFAR10-MwResNet-56-2](https://yadi.sk/d/zMvzifB0vcyGA "MwResNet-56-2")
-- [CIFAR10-MwResNet-56-5](https://yadi.sk/d/k1_34p-qvjdCT "MwResNet-56-5")
-- [CIFAR10-MwResNet-26-2/10](https://yadi.sk/d/g-fKiJdKvcyJH "MwResNet-26-2/10")
-- [CIFAR100-MwResNet-56-2](https://yadi.sk/d/9GTk0HrYvcyK6 "MwResNet-56-2")
-- [CIFAR100-MwResNet-56-5](https://yadi.sk/d/NqIb0RYyvcyKo "MwResNet-56-5")
-- [CIFAR100-MwResNet-26-2/10](https://yadi.sk/d/W8S5Cp3hvcyLT "MwResNet-26-2/10")
+- [CIFAR10-MwResNet-56-2](https://disk.yandex.com/d/zMvzifB0vcyGA "MwResNet-56-2")
+- [CIFAR10-MwResNet-56-5](https://disk.yandex.com/d/k1_34p-qvjdCT "MwResNet-56-5")
+- [CIFAR10-MwResNet-26-2/10](https://disk.yandex.com/d/g-fKiJdKvcyJH "MwResNet-26-2/10")
+- [CIFAR100-MwResNet-56-2](https://disk.yandex.com/d/9GTk0HrYvcyK6 "MwResNet-56-2")
+- [CIFAR100-MwResNet-56-5](https://disk.yandex.com/d/NqIb0RYyvcyKo "MwResNet-56-5")
+- [CIFAR100-MwResNet-26-2/10](https://disk.yandex.com/d/W8S5Cp3hvcyLT "MwResNet-26-2/10")
 
 To test the performance of the MwResNet models, please download the pre-trained models and move them into the directory ``` ./pretrained ```.
 Then you can run the script [test.lua](https://github.com/tanmingkui/multiwaybp/tree/master/multiwaybp-torch/test.lua "testing"). For example:
@@ -73,7 +73,7 @@ th test.lua -dataset cifar10 -model cifar10-mwresnet-26-2-wide-10
 
 2. Test intermediate models
 
-During the training, **Multi-way BP** simultaneously generates multiple models with different depth. Take [CIFAR10-MwResNet-56-5](https://yadi.sk/d/k1_34p-qvjdCT "MwResNet-56-5") (including the ''auxiliary outputs'' file) for example:
+During the training, **Multi-way BP** simultaneously generates multiple models with different depth. Take [CIFAR10-MwResNet-56-5](https://disk.yandex.com/d/k1_34p-qvjdCT "MwResNet-56-5") (including the ''auxiliary outputs'' file) for example:
 
 | Intermediate models | Depth | #Params |
 | ------------- |:-------------:|:-----:|
